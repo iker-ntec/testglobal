@@ -1,0 +1,26 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-white/5 py-12">
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="flex flex-col items-center justify-between gap-6 md:flex-row">
+      <div class="flex items-center gap-2 font-bold">
+        <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-violet-500 to-blue-500 text-xs">
+          N
+        </span>
+        Nexus
+      </div>
+
+      <p class="text-sm text-white/30">
+        © {year} Nexus. Hecho con ♥ y privacidad en mente.
+      </p>
+
+      <div class="flex gap-6 text-sm text-white/40">
+        <a href="#" class="transition hover:text-white">Privacidad</a>
+        <a href="#" class="transition hover:text-white">Términos</a>
+        <a href="#" class="transition hover:text-white">Contacto</a>
+      </div>
+    </div>
+  </div>
+</footer>

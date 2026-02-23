@@ -1,0 +1,53 @@
+﻿---
+import "../styles/global.css";
+
+// Props que acepta este layout desde cualquier página que lo use
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "Nexus — Tu suite privada de productividad",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0f0f14" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph: cómo se ve al compartir el link en redes sociales -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+
+    <!-- Preconnect le dice al navegador que se conecte a Google Fonts -->
+    <!-- antes de que la petición ocurra, ganando velocidad -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>{title}</title>
+  </head>
+
+  <!-- "antialiased" suaviza el renderizado del texto en pantallas retina -->
+  <body class="bg-[#0f0f14] font-sans text-white antialiased">
+    <!--
+      <slot /> es el "hueco" donde Astro inyecta el contenido
+      de cada página que use este layout. Cada página ve su
+      propio contenido aquí, compartiendo head y body.
+    -->
+    <slot />
+  </body>
+</html>
