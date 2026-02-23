@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
@@ -6,7 +6,7 @@ import ProductCard from "../components/ProductCard.astro";
 import { products } from "../data/products";
 ---
 
-<Layout title="Nexus — Tu suite privada de productividad">
+<Layout title="Nexus - Tu suite privada de productividad">
   <Navbar />
 
   <main>
@@ -20,7 +20,7 @@ import { products } from "../data/products";
       <div class="relative z-10 max-w-4xl">
         <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-white/70">
           <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
-          Privacidad por diseño, no como opción
+          Privacidad por diseno, no como opcion
         </div>
 
         <h1 class="mb-6 text-5xl font-extrabold leading-tight tracking-tight md:text-7xl">
@@ -32,12 +32,12 @@ import { products } from "../data/products";
 
         <p class="mx-auto mb-10 max-w-2xl text-lg text-white/50 md:text-xl">
           Una suite completa de herramientas para tu vida digital.
-          Sin publicidad. Sin vender tus datos. Sin letra pequeña.
+          Sin publicidad. Sin vender tus datos. Sin letra pequena.
         </p>
 
         <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <a href="#productos" class="rounded-full bg-gradient-to-r from-violet-600 to-blue-600 px-8 py-3.5 font-semibold transition hover:opacity-90 hover:shadow-lg hover:shadow-violet-500/25">
-            Explorar productos →
+            Explorar productos &rarr;
           </a>
           <a href="#precios" class="rounded-full border border-white/10 bg-white/5 px-8 py-3.5 font-semibold transition hover:bg-white/10">
             Ver precios
@@ -63,7 +63,7 @@ import { products } from "../data/products";
     <section id="productos" class="mx-auto max-w-7xl px-6 py-24">
       <div class="mb-16 text-center">
         <h2 class="mb-4 text-4xl font-bold">Todo lo que necesitas, en un solo lugar</h2>
-        <p class="text-white/50">Cada herramienta diseñada desde cero con tu privacidad como prioridad.</p>
+        <p class="text-white/50">Cada herramienta disenada desde cero con tu privacidad como prioridad.</p>
       </div>
 
       <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -84,20 +84,20 @@ import { products } from "../data/products";
               </span>
             </h2>
             <p class="mb-8 leading-relaxed text-white/50">
-              No es un eslogan de marketing. Cada producto está construido con cifrado
-              de extremo a extremo por defecto, lo que significa que técnicamente
-              es imposible que nosotros leamos tu información.
+              No es un eslogan de marketing. Cada producto esta construido con cifrado
+              de extremo a extremo por defecto, lo que significa que tecnicamente
+              es imposible que nosotros leamos tu informacion.
             </p>
             <ul class="space-y-4">
               {[
-                "Código abierto y auditado por terceros",
+                "Codigo abierto y auditado por terceros",
                 "Sin publicidad ni venta de datos",
-                "Servidores propios en Suiza (jurisdicción neutral)",
+                "Servidores propios en Suiza (jurisdiccion neutral)",
                 "Cifrado E2E en todos los productos",
               ].map((item) => (
                 <li class="flex items-center gap-3 text-white/70">
                   <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-500/20 text-xs text-emerald-400">
-                    ✓
+                    &#10003;
                   </span>
                   {item}
                 </li>
@@ -117,9 +117,9 @@ import { products } from "../data/products";
               <div class="rounded-lg bg-white/5 p-3 text-emerald-400">
                 xK9$mP2#nQ8@vL5&wR3...
               </div>
-              <div class="mt-4 text-white/30">// Lo que tú ves:</div>
+              <div class="mt-4 text-white/30">// Lo que tu ves:</div>
               <div class="rounded-lg bg-white/5 p-3 text-white/80">
-                Hola mamá, llego a las 8 🙂
+                Hola mama, llego a las 8 :)
               </div>
             </div>
           </div>

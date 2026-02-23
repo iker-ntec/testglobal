@@ -1,25 +1,14 @@
----
-// Define la forma exacta de los datos que recibe la tarjeta.
-interface Props {
-  name: string;
-  tagline: string;
-  description: string;
-  icon: string;
-  color: string;
-  border: string;
-  badge: string;
-  href: string;
-  tag: string | null;
-}
+﻿---
+import type { Product } from "../data/products";
 
-const { name, tagline, description, icon, color, border, badge, href, tag } = Astro.props as Props;
-const isExternal = href !== "#";
+type Props = Product;
+
+const { name, slug, tagline, description, icon, color, border, badge, tag } = Astro.props as Props;
+const internalHref = `/productos/${slug}`;
 ---
 
 <a
-  href={href}
-  target={isExternal ? "_blank" : undefined}
-  rel={isExternal ? "noopener noreferrer" : undefined}
+  href={internalHref}
   class={`group relative flex flex-col rounded-2xl border bg-gradient-to-br p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl ${color} ${border}`}
 >
   {tag && (
@@ -32,11 +21,10 @@ const isExternal = href !== "#";
 
   <h3 class="mb-1 text-lg font-bold">{name}</h3>
   <p class="mb-3 text-sm font-medium text-white/60">{tagline}</p>
-
   <p class="text-sm leading-relaxed text-white/40">{description}</p>
 
   <div class="mt-6 flex items-center gap-1 text-sm font-medium text-white/40 transition group-hover:text-white/80">
-    Ir a {name}
-    <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
+    Ver {name}
+    <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">&rarr;</span>
   </div>
 </a>
